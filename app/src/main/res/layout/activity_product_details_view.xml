@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProductDetailsView">
+
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/previous"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            app:tint="@color/textViewBg"
+            app:cardCornerRadius="50dp"
+            >
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/previous"
+                android:background="@color/primary"
+                android:scaleType="centerCrop"
+                app:tint="@color/textViewBg" />
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/round_favorite_border_24"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:tint="@color/textViewBg"
+        app:cardCornerRadius="50dp"
+        >
+        <ImageButton
+            android:id="@+id/btnFav"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/round_favorite_border_24"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            app:tint="@color/primary" />
+    </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/primary"
+
+            android:textSize="30sp"
+            />
+<ImageView
+    android:padding="5dp"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/sampleproductview"
+    android:layout_below="@+id/title"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/productImg"
+    />
+
+
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Chandanam Incense Sticks"
+        android:textSize="20dp"
+
+        android:textColor="@color/primary"
+        android:maxLines="2"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/productImg"
+        />
+    <LinearLayout
+        android:id="@+id/ratingsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productTitle"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹300"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textColor="@color/primary"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/poppins_bold"
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:text="4.8 Stars"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/unfocused"
+
+            android:enabled="false"
+
+            android:drawableTint="@color/unfocused"
+            android:drawableLeft="@drawable/baseline_star_border_24"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bg"
+            android:fontFamily="@font/poppins"
+            android:text="134 Reviews"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:enabled="false"
+
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="4"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:scrollbars="vertical"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:maxLines="4"
+        
+        android:layout_below="@id/ratingsBar"
+        android:text="incense sticks are crafted from a blend of natural ingredients, including the fragrant sandalwood (chandan in Hindi), renowned for its calming and soothing properties. Perfect for religious ceremonies, meditation, and yoga practices, as well as for general relaxation and stress relief, these incense sticks create a serene and tranquil atmosphere"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:text="Add to cart"
+        android:drawableTint="@color/white"
+        android:drawableLeft="@drawable/add_to_cart"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+/>
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+
+        >
+        <ImageButton
+            android:id="@+id/qntyDcrBtn"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/round_remove_24"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+
+            />
+
+        <EditText
+            android:id="@+id/qntyEdt"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:fontFamily="@font/poppins"
+            android:inputType="number"
+            android:text="0"
+            android:textAlignment="center"
+
+            android:textColor="@color/primary"
+            android:textColorHint="@color/unfocused"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:id="@+id/qntyIncrBtn"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/bg"
+
+            android:src="@drawable/round_add_24" />
+    </RelativeLayout>
+</RelativeLayout>

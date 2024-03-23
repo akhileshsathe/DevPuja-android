@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Matrix</string>
+    <string name="app_title">Matrix Mart</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="signup"> Sign Up</string>
+    <string name="LOCAL_API">http://192.168.100.85:8000/api/</string>
+</resources>

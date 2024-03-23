@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    tools:context=".Cart">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/sampleproductview"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Mangalam Incense Stick"
+            android:textColor="@color/primary"
+            android:textSize="15dp" />
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+
+
+
+            >
+            <ImageButton
+                android:id="@+id/qntyDcrBtn"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/round_remove_24"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="30dp"
+
+                />
+
+            <EditText
+                android:id="@+id/qntyEdt"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:fontFamily="@font/poppins"
+
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textColorHint="@color/unfocused"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:id="@+id/qntyIncrBtn"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/bg"
+
+                android:src="@drawable/round_add_24" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="₹300"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/primary"
+            android:textSize="20dp" />
+    </LinearLayout>
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            app:tint="@color/primary"
+            android:src="@drawable/trash"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

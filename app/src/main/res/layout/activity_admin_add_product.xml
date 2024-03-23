@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminAddProduct">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/previous"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:tint="@color/textViewBg"
+        app:cardCornerRadius="50dp"
+        >
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/previous"
+            android:background="@color/primary"
+            android:scaleType="centerCrop"
+            app:tint="@color/textViewBg" />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a new product"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/primary"
+
+        android:textSize="30sp"
+        />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:id="@+id/ImgLayout"
+        android:orientation="horizontal"
+        >
+
+
+<com.google.android.material.button.MaterialButton
+    android:scaleType="fitXY"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    app:cornerRadius="5dp"
+
+    android:backgroundTint="#F4F4F4"
+    android:drawableTop="@drawable/image1"
+    android:textColor="@color/primary"
+    android:drawableTint="@color/primary"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/primary"
+    app:iconPadding="0dp"
+    android:fontFamily="@font/poppins"
+    android:id="@+id/addImgBtn"
+
+    android:text="Tap here to add an image"/>
+    <ImageView
+        android:scaleType="fitCenter"
+        android:id="@+id/product_imageView"
+        android:layout_width="wrap_content"
+        android:maxHeight="100dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+
+        />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/prdtInfo"
+        android:layout_below="@id/ImgLayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="start"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Product Information"
+            android:fontFamily="@font/poppins"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+
+            />
+        <LinearLayout
+
+            android:background="@drawable/border"
+            android:backgroundTint="@color/textViewBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+
+
+
+            android:backgroundTint="@color/textViewBg"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="Name"/>
+                <EditText
+                    android:hint="Add a product name"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="15sp"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:textColorHint="@color/unfocused"
+                    android:id="@+id/edt_product_name"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+
+            android:background="@color/unfocused"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+
+
+            android:backgroundTint="@color/textViewBg"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="Category"/>
+                <EditText
+                    android:hint="Add a category"
+                    android:id="@+id/edt_product_category"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="15sp"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:textColorHint="@color/unfocused"
+                    android:inputType="text"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+
+                android:background="@color/unfocused"/>
+            <EditText
+                android:hint="Description (Optional)"
+                android:id="@+id/edt_product_description"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/poppins"
+                android:textSize="15sp"
+                android:textAlignment="viewStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="start"
+                android:textColorHint="@color/unfocused"
+                android:minLines="3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+                android:inputType="textMultiLine"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/price"
+        android:layout_below="@id/prdtInfo"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="start"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Price and stock"
+            android:fontFamily="@font/poppins"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+
+            />
+        <LinearLayout
+
+            android:background="@drawable/border"
+            android:backgroundTint="@color/textViewBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+
+
+
+                android:backgroundTint="@color/textViewBg"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:text="Price"/>
+                    <EditText
+                        android:hint="₹0"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15sp"
+                        android:textAlignment="viewEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:textColorHint="@color/unfocused"
+                        android:id="@+id/edt_product_price"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+
+                android:background="@color/unfocused"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+
+
+                android:backgroundTint="@color/textViewBg"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="5dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:text="Product Code"/>
+                    <EditText
+                        android:hint="Add a product code"
+                        android:id="@+id/edt_product_code"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15sp"
+                        android:textAlignment="viewEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:textColorHint="@color/unfocused"
+                        android:inputType="text"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+
+                android:background="@color/unfocused"/>
+            <TextView
+                android:hint="Product Code is the reference code assigned to product so it's easier to identify the product\n (e.g KS000031"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="12sp"
+                android:textAlignment="viewStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="start"
+                android:textColorHint="@color/unfocused"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/price"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/quantity"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="start"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:fontFamily="@font/poppins"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+
+            />
+        <LinearLayout
+
+            android:background="@drawable/border"
+            android:backgroundTint="@color/textViewBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+
+
+
+                android:backgroundTint="@color/textViewBg"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_alignParentStart="true"
+                        android:text="Quantity"/>
+                    <RelativeLayout
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+
+                        >
+                        <ImageButton
+                            android:id="@+id/qntyDcrBtn"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/round_remove_24"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="30dp"
+
+                            />
+
+                        <EditText
+                            android:id="@+id/edt_product_quantity"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/primary"
+                            android:textColorHint="@color/unfocused"
+
+                            android:textSize="18sp" />
+
+                        <ImageButton
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="30dp"
+                            android:id="@+id/qntyIncrBtn"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary"
+
+                            android:src="@drawable/round_add_24" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_marginTop="30dp"
+                android:id="@+id/switch_available_for_sale"
+                app:showText="false"
+                android:textOff="OFF"
+                android:textOn="ON"
+                android:text="Available for sale"
+                android:textAlignment="viewStart"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:theme="@style/BrandedSwitch"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:tint="@color/primary"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddProduct"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/poppins"
+            android:drawableLeft="@drawable/baseline_check_24"
+            android:text="Add Product"
+            android:drawablePadding="0dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/bg"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>

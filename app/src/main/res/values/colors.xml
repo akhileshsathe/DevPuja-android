@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="bg">#ebfdf2</color>
+    <color name="primary">#184a2c</color>
+    <color name="secondary">#76b536</color>
+    <color name="textViewBg">#e8f0ee</color>
+
+
+<color name="filledText">#eff0b7</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="unfocused">#6D6D6D</color>
+</resources>
+
+

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "310572888078",
+    "project_id": "matrix-96111",
+    "storage_bucket": "matrix-96111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310572888078:android:aba3cef923aa2aac5b8c5f",
+        "android_client_info": {
+          "package_name": "com.ecomm.matrix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIhLF24qOdIkY88_VXYuWar6mhIIT6_BQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
