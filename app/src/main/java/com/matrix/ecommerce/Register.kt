@@ -1,4 +1,4 @@
-package com.ecomm.matrix
+package com.matrix.ecommerce
 
 import android.content.Intent
 import android.os.Bundle

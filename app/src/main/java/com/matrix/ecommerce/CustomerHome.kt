@@ -1,10 +1,11 @@
-package com.ecomm.matrix
+package com.matrix.ecommerce
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
-import com.ecomm.matrix.databinding.ActivityCustomerHomeBinding
+
+import com.matrix.ecommerce.databinding.ActivityCustomerHomeBinding
 
 import org.w3c.dom.Text
 import retrofit2.Call

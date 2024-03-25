@@ -47,49 +47,100 @@
 
         android:textSize="30sp"
         />
-    <FrameLayout
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:id="@+id/imageTitle"
+        android:layout_gravity="start"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:id="@+id/ImgLayout"
-        android:orientation="horizontal"
-        >
-
-
-<com.google.android.material.button.MaterialButton
-    android:scaleType="fitXY"
-    android:layout_width="200dp"
-    android:layout_height="200dp"
-    app:cornerRadius="5dp"
-
-    android:backgroundTint="#F4F4F4"
-    android:drawableTop="@drawable/image1"
-    android:textColor="@color/primary"
-    android:drawableTint="@color/primary"
-    app:strokeWidth="1dp"
-    app:strokeColor="@color/primary"
-    app:iconPadding="0dp"
-    android:fontFamily="@font/poppins"
-    android:id="@+id/addImgBtn"
-
-    android:text="Tap here to add an image"/>
-    <ImageView
-        android:scaleType="fitCenter"
-        android:id="@+id/product_imageView"
-        android:layout_width="wrap_content"
-        android:maxHeight="100dp"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-
-
+        android:text="Product Image"
+        android:fontFamily="@font/poppins"
+        android:textSize="20sp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/title"
         />
-    </FrameLayout>
+
+<LinearLayout
+    android:background="@drawable/border"
+    android:backgroundTint="@color/textViewBg"
+    android:layout_width="365dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/imageLayout"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    android:layout_below="@id/imageTitle"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+
+        android:scaleType="fitCenter"
+        android:id="@+id/imgProduct"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/image1" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:id="@+id/ImgSelectorLayout"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="Set Image from:"/>
+        <com.google.android.material.button.MaterialButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cornerRadius="5dp"
+
+            android:backgroundTint="#F4F4F4"
+            android:drawableLeft="@drawable/baseline_camera_roll_24"
+            android:textColor="@color/primary"
+            android:drawableTint="@color/primary"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/primary"
+            app:iconPadding="0dp"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/btnAddImageFromGallery"
+            android:text="Gallery"/>
+        <com.google.android.material.button.MaterialButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="5dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#F4F4F4"
+            android:drawableLeft="@drawable/baseline_camera_24"
+            android:textColor="@color/primary"
+            android:drawableTint="@color/primary"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/primary"
+            app:iconPadding="0dp"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/btnAddImageFromCamera"
+            android:text="Camera"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
 
     <LinearLayout
         android:layout_marginTop="30dp"
         android:id="@+id/prdtInfo"
-        android:layout_below="@id/ImgLayout"
+        android:layout_below="@id/imageLayout"
         android:layout_width="match_parent"
         android:orientation="vertical"
 
@@ -187,7 +238,7 @@
                     android:text="Category"/>
                 <EditText
                     android:hint="Add a category"
-                    android:id="@+id/edt_product_category"
+                    android:id="@+id/edtProductCategory"
                     android:textColor="@color/primary"
                     android:fontFamily="@font/poppins"
                     android:textSize="15sp"
@@ -446,7 +497,7 @@
                             />
 
                         <EditText
-                            android:id="@+id/edt_product_quantity"
+                            android:id="@+id/edtProductQuantity"
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
@@ -456,8 +507,8 @@
                             android:text="0"
                             android:textAlignment="center"
                             android:textColor="@color/primary"
-                            android:textColorHint="@color/unfocused"
 
+                            android:textColorHint="@color/unfocused"
                             android:textSize="18sp" />
 
                         <ImageButton
@@ -484,7 +535,7 @@
 
             <androidx.appcompat.widget.SwitchCompat
                 android:layout_marginTop="30dp"
-                android:id="@+id/switch_available_for_sale"
+                android:id="@+id/switchAvailableForSale"
                 app:showText="false"
                 android:textOff="OFF"
                 android:textOn="ON"

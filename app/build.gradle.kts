@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ecomm.matrix"
+    namespace = "com.matrix.ecommerce"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.ecomm.matrix"
+        applicationId = "com.matrix.ecommerce"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
