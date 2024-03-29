@@ -5,7 +5,7 @@
     <color name="primary">#184a2c</color>
     <color name="secondary">#76b536</color>
     <color name="textViewBg">#e8f0ee</color>
-
+    <color name="loadingOverlaybg">#81E8F0EE</color>
 
 <color name="filledText">#eff0b7</color>
 

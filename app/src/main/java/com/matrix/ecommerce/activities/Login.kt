@@ -1,4 +1,4 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,15 +13,14 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
-
-
+import com.matrix.ecommerce.R
 
 class Login : AppCompatActivity() {
 
     private lateinit var backBtn: ImageButton
     private lateinit var signUpTxt: TextView
     private lateinit var resetPasswordBtn: TextView
-    private lateinit var loginBtn:Button
+    private lateinit var loginBtn: Button
     private lateinit var emailEdt: EditText
     private lateinit var passwordEdt: EditText
 
@@ -64,23 +63,23 @@ class Login : AppCompatActivity() {
 
 
         resetPasswordBtn.setOnClickListener {
-            val intent = Intent(this,ResetPassword::class.java)
+            val intent = Intent(this, ResetPassword::class.java)
             startActivity(intent)
         }
         trialBtn.setOnClickListener {
-            val intent = Intent(this,AdminAddProduct::class.java)
+            val intent = Intent(this, AdminAddProduct::class.java)
             startActivity(intent)
         }
         trialBtn2.setOnClickListener {
-            val intent = Intent(this,ProductDetailsView::class.java)
+            val intent = Intent(this, ProductDetailsView::class.java)
             startActivity(intent)
         }
         trialBtn3.setOnClickListener {
-            val intent = Intent(this,Cart::class.java)
+            val intent = Intent(this, Cart::class.java)
             startActivity(intent)
         }
         trialBtn4.setOnClickListener {
-            val intent = Intent(this,CustomerHome::class.java)
+            val intent = Intent(this, CustomerHome::class.java)
             startActivity(intent)
         }
         loginBtn.setOnClickListener {
@@ -119,8 +118,9 @@ class Login : AppCompatActivity() {
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
 
-                           startActivity( Intent(this,CustomerHome::class.java).apply {
-                               flags=Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                           startActivity( Intent(this, CustomerHome::class.java).apply {
+                               flags=
+                                   Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                             }
                            )
 
@@ -153,7 +153,7 @@ class Login : AppCompatActivity() {
 
 
         signUpTxt.setOnClickListener {
-            startActivity(Intent(this,Register::class.java))
+            startActivity(Intent(this, Register::class.java))
         }
     }
 }

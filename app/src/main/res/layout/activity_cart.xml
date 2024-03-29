@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFEFEF"
-    tools:context=".Cart">
+    tools:context=".activities.Cart">
 
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
@@ -109,4 +109,22 @@
             />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/bottomNav"
+
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="28dp"
+        app:menu="@menu/bottom_nav"
+
+        app:labelVisibilityMode="unlabeled"
+        app:itemTextColor="@color/tab_color"
+        android:background="@drawable/bottom_background"
+        app:itemIconTint="@color/tab_color"
+
+        android:layout_marginTop="2dp"
+        android:elevation="2dp"
+        app:itemActiveIndicatorStyle="@color/bg"
+        />
 </RelativeLayout>

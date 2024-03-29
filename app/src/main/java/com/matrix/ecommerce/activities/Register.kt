@@ -1,4 +1,4 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,7 +14,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.auth.userProfileChangeRequest
-
+import com.matrix.ecommerce.R
 
 class Register : AppCompatActivity() {
     private lateinit var backBtn: ImageButton
@@ -202,5 +202,3 @@ class Register : AppCompatActivity() {
 
 
 }
-
-

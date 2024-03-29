@@ -1,4 +1,4 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.models
 import com.google.gson.annotations.SerializedName
 
 data class ResponseModel(

@@ -1,9 +1,9 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import androidx.cardview.widget.CardView
+import androidx.appcompat.app.AppCompatActivity
+import com.matrix.ecommerce.R
 
 class ResetPassword : AppCompatActivity() {
 

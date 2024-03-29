@@ -1,4 +1,4 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.models
 
 data class Product(
     val avaialable_for_sale: Int,
@@ -11,6 +11,8 @@ data class Product(
     val name: String,
     val price: Double,
     val product_code: String,
-    val updated_at: String
+    val updated_at: String,
+    val net_quantity:String,
+    val views:Int
 
 )

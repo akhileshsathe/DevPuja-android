@@ -1,4 +1,4 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

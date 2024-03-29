@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:id="@+id/formScrollView"
     android:layout_height="wrap_content">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".AdminAddProduct">
+    tools:context=".activities.AdminAddProduct">
+
 
     <androidx.cardview.widget.CardView
 
@@ -73,13 +81,16 @@
     android:orientation="horizontal"
     >
 
+
     <ImageView
 
         android:scaleType="fitCenter"
         android:id="@+id/imgProduct"
         android:layout_width="200dp"
+        android:padding="0dp"
         android:layout_height="200dp"
         android:src="@drawable/image1" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,7 +106,7 @@
             android:fontFamily="@font/poppins_bold"
             android:textSize="15sp"
             android:gravity="center"
-            android:text="Set Image from:"/>
+            android:text="Set an image from:"/>
         <com.google.android.material.button.MaterialButton
 
             android:layout_width="wrap_content"
@@ -319,7 +330,7 @@
 
                 android:backgroundTint="@color/textViewBg"
                 >
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -334,20 +345,48 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:text="Price"/>
-                    <EditText
-                        android:hint="₹0"
-                        android:textColor="@color/primary"
-                        android:fontFamily="@font/poppins"
-                        android:textSize="15sp"
-                        android:textAlignment="viewEnd"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@null"
-                        android:textColorHint="@color/unfocused"
-                        android:id="@+id/edt_product_price"
-                        android:inputType="number" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/unfocused"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/edt_product_price"
+                            android:id="@+id/currencyLabel"
 
-                </LinearLayout>
+                            android:text="₹"/>
+                        <EditText
+
+                            android:hint="0.00"
+                            android:textColor="@color/primary"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="15sp"
+                            android:textAlignment="viewEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@null"
+                            android:maxLength="12"
+                            android:textColorHint="@color/unfocused"
+                            android:id="@+id/edt_product_price"
+                            android:inputType="numberDecimal"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/currencyLabel"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
             <View
@@ -404,9 +443,9 @@
 
                 android:background="@color/unfocused"/>
             <TextView
-                android:hint="Product Code is the reference code assigned to product so it's easier to identify the product\n (e.g KS000031"
+                android:hint="@string/product_code_note_hint"
                 android:textColor="@color/primary"
-                android:fontFamily="@font/poppins_bold"
+                android:fontFamily="@font/poppins"
                 android:textSize="12sp"
                 android:textAlignment="viewStart"
                 android:layout_width="match_parent"
@@ -476,57 +515,212 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:layout_alignParentStart="true"
-                        android:text="Quantity"/>
-                    <RelativeLayout
+                        android:text="Stock Quantity"/>
+                    <androidx.cardview.widget.CardView
                         android:layout_width="140dp"
+                        android:backgroundTint="@color/primary"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="0dp"
+                        >
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_alignParentEnd="true"
 
                         >
-                        <ImageButton
-                            android:id="@+id/qntyDcrBtn"
-                            android:backgroundTint="@color/white"
-                            android:src="@drawable/round_remove_24"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
+<!--                        <ImageButton-->
+<!--                            android:id="@+id/qntyDcrBtn"-->
+<!--                            android:backgroundTint="@color/white"-->
+<!--                            android:src="@drawable/round_remove_24"-->
+<!--                            android:layout_width="36dp"-->
+<!--                            android:layout_height="36dp"-->
+
+
+<!--                            />-->
+                        <androidx.cardview.widget.CardView
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="30dp"
+                            android:layout_width="wrap_content"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="0dp"
 
-                            />
+                            android:backgroundTint="@color/primary"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/qntyDcrBtn"
+                                android:src="@drawable/round_remove_24"
+                                app:tint="@color/white" />
+                        </androidx.cardview.widget.CardView>
 
                         <EditText
                             android:id="@+id/edtProductQuantity"
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
                             android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
                             android:background="@null"
                             android:fontFamily="@font/poppins"
                             android:inputType="number"
+                            android:minWidth="36dp"
                             android:text="0"
                             android:textAlignment="center"
-                            android:textColor="@color/primary"
-
+                            android:textColor="@color/white"
                             android:textColorHint="@color/unfocused"
                             android:textSize="18sp" />
-
-                        <ImageButton
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
+                        <androidx.cardview.widget.CardView
                             android:layout_alignParentEnd="true"
                             android:layout_marginStart="30dp"
-                            android:id="@+id/qntyIncrBtn"
                             android:layout_centerVertical="true"
-                            android:backgroundTint="@color/secondary"
+                            android:layout_width="wrap_content"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="0dp"
 
-                            android:src="@drawable/round_add_24" />
+                            android:backgroundTint="@color/primary"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/qntyIncrBtn"
+                            android:src="@drawable/round_add_24"
+
+                            app:tint="@color/white" />
+                        </androidx.cardview.widget.CardView>
                     </RelativeLayout>
-
+                    </androidx.cardview.widget.CardView>
 
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+
+                android:background="@color/unfocused"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+
+
+                android:backgroundTint="@color/textViewBg"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="5dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_alignParentStart="true"
+                        android:text="Net Quantity"/>
+
+                    <EditText
+                        android:hint="Add the net quantity"
+                        android:id="@+id/edt_product_net_quantity"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15sp"
+                        android:textAlignment="viewEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:textColorHint="@color/unfocused"
+                        android:inputType="numberDecimal"
+                        />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+
+                android:background="@color/unfocused"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+
+
+                android:backgroundTint="@color/textViewBg"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="5dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_alignParentStart="true"
+                        android:text="Unit of Measure"/>
+
+                    <EditText
+                        android:hint="Unit of Measure"
+                        android:id="@+id/edt_product_unit_measure"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15sp"
+                        android:textAlignment="viewEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:textColorHint="@color/unfocused"
+                        android:inputType="text"
+                        />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+
+                android:background="@color/unfocused"/>
+            <TextView
+                android:text="@string/quantity_hint_note"
+                android:textColor="@color/unfocused"
+                android:fontFamily="@font/poppins"
+                android:textSize="12sp"
+                android:textAlignment="viewStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="start"
+                android:textColorHint="@color/unfocused"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+
+                />
 
 
 
@@ -548,8 +742,7 @@
                 android:textColor="@color/black"
                 android:tint="@color/primary"
                 android:textSize="20sp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
@@ -557,11 +750,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAddProduct"
+
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/primary"
+
             android:fontFamily="@font/poppins"
             android:drawableLeft="@drawable/baseline_check_24"
             android:text="Add Product"
@@ -570,7 +765,33 @@
             android:textColor="@color/bg"
             />
 
+
     </LinearLayout>
 
+
+
 </RelativeLayout>
+
+
 </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:clickable="true"
+        android:visibility="gone"
+        android:id="@+id/loadingProgressBar"
+        android:background="@color/loadingOverlaybg"
+        android:layout_height="match_parent">
+     <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+
+        android:id="@+id/progressBar"
+        android:layout_height="wrap_content"
+
+        android:indeterminate="true" />
+
+    </LinearLayout>
+</RelativeLayout>

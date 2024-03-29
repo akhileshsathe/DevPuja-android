@@ -1,7 +1,9 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.interfaces
 
+import com.matrix.ecommerce.models.Product
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -25,7 +27,10 @@ interface ApiService {
     @Part("description") description: RequestBody,
     @Part("name") name: RequestBody,
     @Part("price") price: RequestBody,
-    @Part("product_code") product_code: RequestBody
+    @Part("product_code") product_code: RequestBody,
+    @Part("unit_of_measure") unit_of_measure: RequestBody,
+    @Part("net_quantity") net_quantity: RequestBody
 
-):Call<List<Product>>
+
+):Call<ResponseBody>
 }

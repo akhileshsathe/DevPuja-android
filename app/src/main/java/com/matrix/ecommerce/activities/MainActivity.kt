@@ -1,16 +1,14 @@
-package com.matrix.ecommerce
+package com.matrix.ecommerce.activities
 
 import android.content.Intent
-//import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
-
+import com.matrix.ecommerce.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -30,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             if(currentUser!=null){
                 val intent = Intent(this, CustomerHome::class.java)
                     .apply {
-                        flags=Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     }
                 startActivity(intent)
 
@@ -38,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             else{
                 val intent = Intent(this, Login::class.java)
                     .apply {
-                        flags=Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     }
                 startActivity(intent)
             }
@@ -50,8 +48,3 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
-
-
-
-
-

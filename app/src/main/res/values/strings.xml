@@ -4,4 +4,8 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="signup"> Sign Up</string>
     <string name="LOCAL_API">http://192.168.100.85:8000/api/</string>
+    <string name="quantity_hint_note"><i><b>Stock Quantity</b></i> refers to the inventory item count.\n<i><b>Net Quantity</b></i> refers to the volume of individual product</string>
+    <string name="product_code_note_hint"><i><b>Product Code</b></i> is the reference code assigned to product so it\'s easier to identify the product\n (e.g KS000031</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
